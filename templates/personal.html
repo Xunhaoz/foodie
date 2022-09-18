@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>{{ username }}</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Foodie</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> 購物車</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-usd"></span> 帳單概況</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span
+                                class="glyphicon glyphicon-info-sign"></span> 使用者中心</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">{{ username }}的個人檔案</a></li>
+                            <li><a href="#">我的訂單</a></li>
+                            <li><a href="#">我的收藏</a></li>
+                            <li><a href="#">自訂預算</a></li>
+                            <li><a href="#">客服中心</a></li>
+                            <li><a href="#">錢包</a></li>
+                            <li><a href="#">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="btn-group  btn-group-justified btn-lg">
+            <div class="btn-group ">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    年度月份 <span class="caret"></span></button>
+                <ul class="dropdown-menu" style="width: 100%;" role="menu">
+                    <li><a href="/personal/{{ username }}?month=1">一月</a></li>
+                    <li><a href="/personal/{{ username }}?month=2">二月</a></li>
+                    <li><a href="/personal/{{ username }}?month=3">三月</a></li>
+                    <li><a href="/personal/{{ username }}?month=4">四月</a></li>
+                    <li><a href="/personal/{{ username }}?month=5">五月</a></li>
+                    <li><a href="/personal/{{ username }}?month=6">六月</a></li>
+                    <li><a href="/personal/{{ username }}?month=7">七月</a></li>
+                    <li><a href="/personal/{{ username }}?month=8">八月</a></li>
+                    <li><a href="/personal/{{ username }}?month=9">九月</a></li>
+                    <li><a href="/personal/{{ username }}?month=10">十月</a></li>
+                    <li><a href="/personal/{{ username }}?month=11">十一月</a></li>
+                    <li><a href="/personal/{{ username }}?month=12">十二月</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">{{ report_month }} 月份報表</div>
+            <div class="panel-body text-center">
+                <canvas id="budget_pie_chart" style="width: 100%;"></canvas>
+
+                <br>
+
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">每月預算</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <input class="form-control" type="text" id="month_budget" value="$ {{ sum_of_money }}">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default">
+                                        <i class="glyphicon glyphicon-saved"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">每日訂購次數</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" onclick="minus_day()">
+                                        <i class="glyphicon glyphicon-minus"></i>
+                                    </button>
+                                </div>
+                                <input class="form-control text-center" type="text" id="day_times" value=" 3 ">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" onclick="add_day()">
+                                        <i class="glyphicon glyphicon-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">每周訂購次數</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" onclick="minus_week()">
+                                        <i class="glyphicon glyphicon-minus"></i>
+                                    </button>
+                                </div>
+                                <input class="form-control text-center" type="text" id="week_times" value=" 15 ">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" onclick="add_week()">
+                                        <i class="glyphicon glyphicon-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">每餐最高金額</label>
+                        <div class="col-sm-6">
+                            <input class="form-control text-center" type="text" value="NT 200">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">累計花費</label>
+                        <div class="col-sm-6">
+                            <input class="form-control text-center" id="month_sum" type="text"
+                                value="NT {{ sum_of_money }}">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">剩餘花費</label>
+                        <div class="col-sm-6">
+                            <input class="form-control text-center" id="remaining" type="text" value="NT 0">
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script>
+        let xValues = {{ option_values| tojson }};
+        let yValues = {{ money_values| tojson }};
+        let barColors = [
+            "#557679",
+            "#BA9776",
+            "#B58AB3",
+            "#6E67A3",
+            "#326491",
+            "#93A487",
+            "#83B9C7",
+            "#B58AB3"
+        ];
+
+        new Chart("budget_pie_chart", {
+            type: "pie",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+        });
+
+        function add_day() {
+            let new_day_times = +$("#day_times").val() + 1;
+            $("#day_times").val(new_day_times);
+        }
+
+        function minus_day() {
+            let new_day_times = +$("#day_times").val() - 1;
+            $("#day_times").val(new_day_times);
+        }
+
+        function add_week() {
+            let new_week_times = +$("#week_times").val() + 1;
+            $("#week_times").val(new_week_times);
+        }
+
+        function minus_week() {
+            let new_week_times = +$("#week_times").val() - 1;
+            $("#week_times").val(new_week_times);
+        }
+
+        $("#month_budget").bind("input propertychange", function (event) {
+            let re1 = /[0-9]+/g;
+            let re2 = /[0-9]+/g
+            let month_sum = re1.exec($('#month_sum').val());
+            let month_budget = re2.exec($("#month_budget").val());
+
+            remaining = Number(month_budget['0']) - Number(month_sum['0']);
+            $("#remaining").val('$' + String(remaining))
+
+        })
+    </script>
+</body>
+
+</html>

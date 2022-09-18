@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Foodie</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> 購物車</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-usd"></span> 帳單概況</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span
+                                class="glyphicon glyphicon-info-sign"></span> 使用者中心</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">{{ username }}的個人檔案</a></li>
+                            <li><a href="#">我的訂單</a></li>
+                            <li><a href="#">我的收藏</a></li>
+                            <li><a href="#">自訂預算</a></li>
+                            <li><a href="#">客服中心</a></li>
+                            <li><a href="#">錢包</a></li>
+                            <li><a href="#">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">人氣推薦</a></li>
+                    <li><a data-toggle="tab" href="#menu1">品項一</a></li>
+                    <li><a data-toggle="tab" href="#menu2">品項二</a></li>
+                    <li><a data-toggle="tab" href="#menu3">備註</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <div class="text-center">
+                            <h1>店家圖</h1>
+                        </div>
+                        <hr>
+
+                        <h3>人氣推薦</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr>
+                        
+                        <h3>品項選擇 I</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>品項選擇 II</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>備註</h3>
+                        <div class="form-group">
+                            <label for="comment">備註:</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <div class="text-center">
+                            <h1>店家圖</h1>
+                        </div>
+                        <hr>
+                        
+                        <h3>品項選擇 I</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <h3>人氣推薦</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>品項選擇 II</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>備註</h3>
+                        <div class="form-group">
+                            <label for="comment">備註:</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                        
+
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <div class="text-center">
+                            <h1>店家圖</h1>
+                        </div>
+                        <hr>
+                        
+                        <h3>品項選擇 II</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <h3>人氣推薦</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>品項選擇 I</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>備註</h3>
+                        <div class="form-group">
+                            <label for="comment">備註:</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
+                    <div id="menu3" class="tab-pane fade">
+                        <div class="text-center">
+                            <h1>店家圖</h1>
+                        </div>
+                        <hr>
+                        
+                        <h3>備註</h3>
+                        <div class="form-group">
+                            <label for="comment">備註:</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+
+                        <hr>
+
+                        <h3>人氣推薦</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>品項選擇 I</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <h3>品項選擇 II</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
+                                            style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">商家名字</h4>
+                                        <p>描述</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="row">
+                    <h1 class="col-sm-4">品項</h1>
+                    <h1 class="col-sm-8 text-right">價錢</h1>
+                </div>
+                <div class="row">
+                    <h1 class="col-sm-4">細項</h1>
+                    <h1 class="col-sm-8 text-right">價錢</h1>    
+                </div>            
+                <div class="row">
+                    <hr>
+                </div>
+                <div class="row">
+                    <h1 class="col-sm-12 text-right">總價錢</h1>
+                </div>
+                <div class="row text-center">
+                    <button type="button" class="btn btn-primary btn-block">結帳</button>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+
+    </div>
+
+</body>
+
+</html>
