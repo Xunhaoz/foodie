@@ -58,7 +58,18 @@ def display_personalInfo():
 def not_found(e):
     return render_template("404.html")
 
+@app.route("/Private_Collection")
+def Private_Collection():
+    return render_template('Private_Collection.html') 
 
+@app.route("/PersonalOrder")
+def PersonalOrder():
+    return render_template('PersonalOrder.html')     
+
+@app.route("/CloseOrder")
+def CloseOrder():
+    return render_template('CloseOrder.html') 
+    return render_template("404.html")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
