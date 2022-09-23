@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .container {
+      text-align: center;
+      border: 3px solid rgb(51, 53, 51);
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><img src="static/src/test.png" style="height:49px;" alt="logo"></a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 註冊</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">登入 <span
+              class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">個人檔案</a></li>
+            <li><a href="#">我的訂單</a></li>
+            <li><a href="#">我的收藏</a></li>
+            <li><a href="#">自訂預算</a></li>
+            <li><a href="#">客服中心</a></li>
+            <li><a href="#">錢包</a></li>
+          </ul>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+
+
+
+
+
+      <form class="form-inline">
+        <h2><strong>目前餘額</strong></h2>
+        <h2><strong>$$$</strong></h2>
+
+
+        <!--<div class="container-fluid">
+          <div class="col-md-6 col-md-offset-3">
+
+            <div class="input-group">
+              <input type="number" class="form-control" size="70" placeholder="輸入儲值金額" required>
+            </div>
+
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-info">輸入</button>
+            </div>
+
+          </div>
+      </form>-->
+
+
+      <form class="form-inline">
+        <div class="input-group">
+          <input type="number" class="form-control" size="70" placeholder="輸入儲值金額" required>
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-danger">輸入</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='src/donate.png') }}"
+            style="height:300px;" alt="picture_donate">
+        </a>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+  </div>
+
+
+
+
+  <div class="container-fluid">
+    <div class="text-center">
+      <h2><strong>快速儲值</strong></h2>
+      <h4>Choose a payment plan that works for you</h4>
+    </div>
+    <div class="row">
+
+      <div class="col-sm-4">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Basic</h1>
+          </div>
+          <div class="panel-body">
+            <h3><strong>NT$ 200</strong></h3>
+          </div>
+          <div class="panel-footer">
+
+            <input type="button" class="btn btn-info" value="Deposit 200">
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-sm-4">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Pro</h1>
+          </div>
+          <div class="panel-body">
+            <h3><strong>NT$ 500</strong></h3>
+          </div>
+          <div class="panel-footer">
+
+            <input type="button" class="btn btn-info" value="Deposit 500">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-4">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Premium</h1>
+          </div>
+          <div class="panel-body">
+            <h3><strong>NT$ 1000</strong></h3>
+          </div>
+          <div class="panel-footer">
+
+            <input type="button" class="btn btn-info" value="Deposit 1000">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <body>

@@ -71,5 +71,23 @@ def CloseOrder():
     return render_template('CloseOrder.html') 
     return render_template("404.html")
 
+@app.route("/loginSuccess")
+def login_success():
+    return render_template('loginSuccess.html')
+
+@app.route("/deposit")
+def deposit():
+    return render_template('deposit.html')
+
+
+@app.route("/confirmOrder")
+def confirm_order():
+    return render_template('confirmOrder.html')
+
+
+@app.route("/splitBill")
+def split_bill():
+    return render_template('splitBill.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
