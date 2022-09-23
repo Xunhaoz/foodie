@@ -38,9 +38,27 @@ def display_advanced_purchase():
 def display_menu():
     return render_template('food_menu.html')
 
+@app.route("/customerMessage.html")
+def display_cutomerMessage():
+    return render_template('customerMessage.html')
+
+@app.route("/customerService")
+def display_customerService():
+    return render_template('customerService.html')
+
+@app.route("/memberRegistering")
+def display_memberRegistering():
+    return render_template('memberRegistering.html')
+
+@app.route("/personalInfo")
+def display_personalInfo():
+    return render_template('personalInfo.html')
+
 @app.errorhandler(404)
 def not_found(e):
     return render_template("404.html")
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
