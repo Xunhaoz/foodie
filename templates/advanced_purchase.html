@@ -9,6 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/style.css") }}">
+
 </head>
 
 <body>
@@ -49,54 +51,48 @@
         <div class="row">
             <div class="col-sm-8">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#home">人氣推薦</a></li>
-                    <li><a data-toggle="tab" href="#menu1">品項一</a></li>
-                    <li><a data-toggle="tab" href="#menu2">品項二</a></li>
+                    <li class="active"><a data-toggle="tab" href="#home">銅板輕鬆點</a></li>
+                    <li><a data-toggle="tab" href="#menu1">麥當勞分享盒</a></li>
+                    <li><a data-toggle="tab" href="#menu2">特選系列</a></li>
                     <li><a data-toggle="tab" href="#menu3">備註</a></li>
                 </ul>
 
                 <div class="tab-content">
                     <div id="home" class="tab-pane fade in active">
-                        <div class="text-center">
-                            <h1>店家圖</h1>
-                        </div>
-                        <hr>
-
-                        <h3>人氣推薦</h3>
+                        <br>
+                        <div class="jumbotron" style="background-image: url('{{ url_for("static", filename="src/20211020210954_68.jpg") }}'); margin-bottom: 0px;"></div>
+                        <h3 >銅板輕鬆點</h3>
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
-                                            style="width:60px">
+                                    <div class="media-left" >
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/大蛋捲冰淇淋+雪碧(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/四塊麥克鷄塊+玉米湯(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/吉事漢堡+可樂(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
@@ -105,36 +101,33 @@
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/勁辣香鷄翅(一份兩塊)+冰紅茶(檸檬風味)(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">勁辣香鷄翅(一份兩塊)+冰紅茶(檸檬風味)(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/酥嫩鷄翅(一份兩塊)+可樂(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">酥嫩鷄翅(一份兩塊)+可樂(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/薯條(小包)+雪碧(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
@@ -142,41 +135,38 @@
                         
                         <hr>
                         
-                        <h3>品項選擇 I</h3>
+                        <h3>麥當勞分享盒</h3>
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/麥克雞塊分享盒(20塊) $250.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">麥克雞塊分享盒(20塊)</h5>
+                                        <p>價錢： $250</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/麥克鷄塊分享盒(30塊) $300.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">麥克鷄塊分享盒(30塊)</h5>
+                                        <p>價錢： $300</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/麥脆鷄腿分享盒(6塊) $150.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">麥脆鷄腿分享盒(6塊)</h5>
+                                        <p>價錢： $150</p>
                                     </div>
                                 </div>
                             </div>
@@ -185,76 +175,70 @@
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/勁辣香鷄翅分享盒 $180.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">勁辣香鷄翅分享盒</h5>
+                                        <p>價錢： $180</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/酥嫩鷄翅分享盒 $180.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">酥嫩鷄翅分享盒</h5>
+                                        <p>價錢： $180</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/鷄塊鷄腿分享盒 $350.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">鷄塊鷄腿分享盒</h5>
+                                        <p>價錢： $350</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3>品項選擇 II</h3>
+                        <h3>特選系列</h3>
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/特選系列/BLT 安格斯牛肉堡  $80.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">BLT 安格斯牛肉堡</h5>
+                                        <p>價錢： $80</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/特選系列/BLT 嫩煎鷄腿堡 $95.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">BLT 嫩煎鷄腿堡</h5>
+                                        <p>價錢： $95</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/特選系列/BLT 辣脆鷄腿堡 $75.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">BLT 辣脆鷄腿堡</h5>
+                                        <p>價錢： $75</p>
                                     </div>
                                 </div>
                             </div>
@@ -263,42 +247,38 @@
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/特選系列/凱撒辣脆鷄沙拉 #85.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">凱撒辣脆鷄沙拉</h5>
+                                        <p>價錢： $85</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/特選系列/義式烤鷄沙拉 $100.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">義式烤鷄沙拉</h5>
+                                        <p>價錢： $100</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/特選系列/蕈菇安格斯牛肉堡 $75.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">蕈菇安格斯牛肉堡</h5>
+                                        <p>價錢： $75</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3>備註</h3>
                         <div class="form-group">
                             <label for="comment">備註:</label>
                             <textarea class="form-control" rows="5" id="comment"></textarea>
@@ -306,46 +286,115 @@
 
                     </div>
                     <div id="menu1" class="tab-pane fade">
-                        <div class="text-center">
-                            <h1>店家圖</h1>
+                        <br>
+                        <div class="jumbotron" style="background-image: url('{{ url_for("static", filename="src/20211020210954_68.jpg") }}'); margin-bottom: 0px;"></div>
+                        
+                        <h3>麥當勞分享盒</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/麥克雞塊分享盒(20塊) $250.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">麥克雞塊分享盒(20塊)</h5>
+                                        <p>價錢： $250</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/麥克鷄塊分享盒(30塊) $300.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">麥克鷄塊分享盒(30塊)</h5>
+                                        <p>價錢： $300</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/麥脆鷄腿分享盒(6塊) $150.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">麥脆鷄腿分享盒(6塊)</h5>
+                                        <p>價錢： $150</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/勁辣香鷄翅分享盒 $180.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">勁辣香鷄翅分享盒</h5>
+                                        <p>價錢： $180</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/酥嫩鷄翅分享盒 $180.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">酥嫩鷄翅分享盒</h5>
+                                        <p>價錢： $180</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/鷄塊鷄腿分享盒 $350.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">鷄塊鷄腿分享盒</h5>
+                                        <p>價錢： $350</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <hr>
                         
-                        <h3>品項選擇 I</h3>
+                        <h3>銅板輕鬆點</h3>
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/大蛋捲冰淇淋+雪碧(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/四塊麥克鷄塊+玉米湯(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/吉事漢堡+可樂(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
@@ -354,78 +403,70 @@
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/勁辣香鷄翅(一份兩塊)+冰紅茶(檸檬風味)(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">勁辣香鷄翅(一份兩塊)+冰紅茶(檸檬風味)(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/酥嫩鷄翅(一份兩塊)+可樂(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">酥嫩鷄翅(一份兩塊)+可樂(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/薯條(小包)+雪碧(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <hr>
-
-                        <h3>人氣推薦</h3>
+                        <h3>特選系列</h3>
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/特選系列/BLT 安格斯牛肉堡  $80.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">BLT 安格斯牛肉堡</h5>
+                                        <p>價錢： $80</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/特選系列/BLT 嫩煎鷄腿堡 $95.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">BLT 嫩煎鷄腿堡</h5>
+                                        <p>價錢： $95</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/特選系列/BLT 辣脆鷄腿堡 $75.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">BLT 辣脆鷄腿堡</h5>
+                                        <p>價錢： $75</p>
                                     </div>
                                 </div>
                             </div>
@@ -434,168 +475,155 @@
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/特選系列/凱撒辣脆鷄沙拉 #85.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">凱撒辣脆鷄沙拉</h5>
+                                        <p>價錢： $85</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/特選系列/義式烤鷄沙拉 $100.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">義式烤鷄沙拉</h5>
+                                        <p>價錢： $100</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/特選系列/蕈菇安格斯牛肉堡 $75.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">蕈菇安格斯牛肉堡</h5>
+                                        <p>價錢： $75</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3>品項選擇 II</h3>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3>備註</h3>
                         <div class="form-group">
                             <label for="comment">備註:</label>
                             <textarea class="form-control" rows="5" id="comment"></textarea>
                         </div>
-                        
 
                     </div>
                     <div id="menu2" class="tab-pane fade">
-                        <div class="text-center">
-                            <h1>店家圖</h1>
+                        <br>
+                        <div class="jumbotron" style="background-image: url('{{ url_for("static", filename="src/20211020210954_68.jpg") }}'); margin-bottom: 0px;"></div>
+                        
+                        <h3>特選系列</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/特選系列/BLT 安格斯牛肉堡  $80.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">BLT 安格斯牛肉堡</h5>
+                                        <p>價錢： $80</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/特選系列/BLT 嫩煎鷄腿堡 $95.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">BLT 嫩煎鷄腿堡</h5>
+                                        <p>價錢： $95</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/特選系列/BLT 辣脆鷄腿堡 $75.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">BLT 辣脆鷄腿堡</h5>
+                                        <p>價錢： $75</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/特選系列/凱撒辣脆鷄沙拉 #85.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">凱撒辣脆鷄沙拉</h5>
+                                        <p>價錢： $85</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/特選系列/義式烤鷄沙拉 $100.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">義式烤鷄沙拉</h5>
+                                        <p>價錢： $100</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/特選系列/蕈菇安格斯牛肉堡 $75.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">蕈菇安格斯牛肉堡</h5>
+                                        <p>價錢： $75</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
                         <hr>
                         
-                        <h3>品項選擇 II</h3>
+                        <h3>銅板輕鬆點</h3>
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/大蛋捲冰淇淋+雪碧(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/四塊麥克鷄塊+玉米湯(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/吉事漢堡+可樂(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
@@ -604,78 +632,70 @@
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/勁辣香鷄翅(一份兩塊)+冰紅茶(檸檬風味)(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">勁辣香鷄翅(一份兩塊)+冰紅茶(檸檬風味)(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/酥嫩鷄翅(一份兩塊)+可樂(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">酥嫩鷄翅(一份兩塊)+可樂(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/薯條(小包)+雪碧(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <hr>
-
-                        <h3>人氣推薦</h3>
+                        <h3>麥當勞分享盒</h3>
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/麥克雞塊分享盒(20塊) $250.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">麥克雞塊分享盒(20塊)</h5>
+                                        <p>價錢： $250</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/麥克鷄塊分享盒(30塊) $300.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">麥克鷄塊分享盒(30塊)</h5>
+                                        <p>價錢： $300</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/麥脆鷄腿分享盒(6塊) $150.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">麥脆鷄腿分享盒(6塊)</h5>
+                                        <p>價錢： $150</p>
                                     </div>
                                 </div>
                             </div>
@@ -684,331 +704,87 @@
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/勁辣香鷄翅分享盒 $180.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">勁辣香鷄翅分享盒</h5>
+                                        <p>價錢： $180</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/酥嫩鷄翅分享盒 $180.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">酥嫩鷄翅分享盒</h5>
+                                        <p>價錢： $180</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/鷄塊鷄腿分享盒 $350.jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">鷄塊鷄腿分享盒</h5>
+                                        <p>價錢： $350</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h3>品項選擇 I</h3>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3>備註</h3>
                         <div class="form-group">
                             <label for="comment">備註:</label>
                             <textarea class="form-control" rows="5" id="comment"></textarea>
                         </div>
+
                     </div>
-                    <div id="menu3" class="tab-pane fade">
-                        <div class="text-center">
-                            <h1>店家圖</h1>
-                        </div>
-                        <hr>
-                        
+                    <div id="menu2" class="tab-pane fade">
+                        <br>
+                        <div class="jumbotron" style="background-image: url('{{ url_for("static", filename="src/20211020210954_68.jpg") }}'); margin-bottom: 0px;"></div>
                         <h3>備註</h3>
                         <div class="form-group">
                             <label for="comment">備註:</label>
                             <textarea class="form-control" rows="5" id="comment"></textarea>
                         </div>
-
+                        
                         <hr>
-
-                        <h3>人氣推薦</h3>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3>品項選擇 I</h3>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
-                                            style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         
-                        <h3>品項選擇 II</h3>
+                        <h3>銅板輕鬆點</h3>
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-ella-olsson-1640777.jpg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/大蛋捲冰淇淋+雪碧(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/四塊麥克鷄塊+玉米湯(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/吉事漢堡+可樂(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
@@ -1017,62 +793,218 @@
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/勁辣香鷄翅(一份兩塊)+冰紅茶(檸檬風味)(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">勁辣香鷄翅(一份兩塊)+冰紅茶(檸檬風味)(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/酥嫩鷄翅(一份兩塊)+可樂(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">酥嫩鷄翅(一份兩塊)+可樂(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg")}}" class="media-object"
-                                            style="width:60px">
+                                        <img src="{{ url_for('static', filename="src/銅板輕鬆點/薯條(小包)+雪碧(小).jfif")}}" class="media-object" style="width:60px">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">商家名字</h4>
-                                        <p>描述</p>
+                                        <h5 class="media-heading">大蛋捲冰淇淋+雪碧(小)</h5>
+                                        <p>價錢： $50</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
+                        <h3>麥當勞分享盒</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/麥克雞塊分享盒(20塊) $250.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">麥克雞塊分享盒(20塊)</h5>
+                                        <p>價錢： $250</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/麥克鷄塊分享盒(30塊) $300.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">麥克鷄塊分享盒(30塊)</h5>
+                                        <p>價錢： $300</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/麥脆鷄腿分享盒(6塊) $150.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">麥脆鷄腿分享盒(6塊)</h5>
+                                        <p>價錢： $150</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/勁辣香鷄翅分享盒 $180.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">勁辣香鷄翅分享盒</h5>
+                                        <p>價錢： $180</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/酥嫩鷄翅分享盒 $180.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">酥嫩鷄翅分享盒</h5>
+                                        <p>價錢： $180</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/麥當勞分享盒/鷄塊鷄腿分享盒 $350.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">鷄塊鷄腿分享盒</h5>
+                                        <p>價錢： $350</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>特選系列</h3>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/特選系列/BLT 安格斯牛肉堡  $80.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">BLT 安格斯牛肉堡</h5>
+                                        <p>價錢： $80</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/特選系列/BLT 嫩煎鷄腿堡 $95.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">BLT 嫩煎鷄腿堡</h5>
+                                        <p>價錢： $95</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/特選系列/BLT 辣脆鷄腿堡 $75.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">BLT 辣脆鷄腿堡</h5>
+                                        <p>價錢： $75</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/特選系列/凱撒辣脆鷄沙拉 #85.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">凱撒辣脆鷄沙拉</h5>
+                                        <p>價錢： $85</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/特選系列/義式烤鷄沙拉 $100.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">義式烤鷄沙拉</h5>
+                                        <p>價錢： $100</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{{ url_for('static', filename="src/特選系列/蕈菇安格斯牛肉堡 $75.jfif")}}" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="media-heading">蕈菇安格斯牛肉堡</h5>
+                                        <p>價錢： $75</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-4">
-                <div class="row">
-                    <h1 class="col-sm-4">品項</h1>
-                    <h1 class="col-sm-8 text-right">價錢</h1>
+            <div class="panel panel-default col-sm-3 col-sm-offset-1">
+                <div class="row" style="margin:20px">
+                    <h3><strong>訂單內容</strong></h3>
+
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>餐點</th>
+                                <th>價格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>訂單一</td>
+                                <td>NT $$$</td>
+                            </tr>
+
+                            <tr>
+                                <td>訂單二</td>
+                                <td>NT $$$</td>
+                            </tr>
+
+                            <tr>
+                                <td>訂單三</td>
+                                <td>NT $$$</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
-                <div class="row">
-                    <h1 class="col-sm-4">細項</h1>
-                    <h1 class="col-sm-8 text-right">價錢</h1>    
-                </div>            
-                <div class="row">
-                    <hr>
-                </div>
-                <div class="row">
-                    <h1 class="col-sm-12 text-right">總價錢</h1>
-                </div>
-                <div class="row text-center">
-                    <button type="button" class="btn btn-primary btn-block">結帳</button>
+                <div class="row" style="margin:20px">
+                    <h3><strong>總額</strong>&emsp;&emsp;<strong>NT $$$</strong></h3>
                 </div>
             </div>
             

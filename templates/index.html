@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -7,99 +8,63 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    .container {
-      text-align: center;
-      border: black 2px;
-      position:absolute;
-      max-width: 400px;
-      padding: 40px 40px;
-      width: 100%;
-      position:absolute;
-      top:160px;
-      right:600px;
-    }
-    </style>
-
-    <style>
-      .form-control{
-      text-align: center;
-      }
-    </style>
-
-<style>
-  .btn{
-    box-shadow: 1px 1px 2px #e7cbcb;
-    background-color:#d79393;
-    border:none;
-  }
-  .btn:hover{background-color:#d8b7b7 }
-  .btn:active{background-color:#d4b9b9 }
-</style>
-
-
-
-<style>
-  .word{
-    font-family:Trebuchet MS, sans-serif;
-    padding: 8px;
-  }
-</style>
-
-
-
+  <link rel="stylesheet" href="{{ url_for('static', filename=" css/style.css") }}">
 
 </head>
+
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Foodie</a>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Foodie</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> 購物車</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-usd"></span> 帳單概況</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span
+                class="glyphicon glyphicon-info-sign"></span> 使用者中心</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">{{ username }}的個人檔案</a></li>
+              <li><a href="#">我的訂單</a></li>
+              <li><a href="#">我的收藏</a></li>
+              <li><a href="#">自訂預算</a></li>
+              <li><a href="#">客服中心</a></li>
+              <li><a href="#">錢包</a></li>
+              <li><a href="#">登出</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 註冊</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">登入 <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">個人檔案</a></li>
-          <li><a href="#">我的訂單</a></li>
-          <li><a href="#">我的收藏</a></li>
-          <li><a href="#">自訂預算</a></li>
-          <li><a href="#">客服中心</a></li>
-          <li><a href="#">錢包</a></li>
-    </ul>
-  </div>
-</nav>
+  </nav>
 
 
-  <div class="container" height="400px" weight="340px">
-    <div class="panel panel-default">
-      <div class="panel-body" >
-        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-           <h2 class="word">Welcome Back</h2>
-          <div class="form-floating mb-3">
-              <input class="form-control" id="email" type="email" placeholder="Email" data-sb-validations="required,email" />
+  <div class="container text-center">
+    <div class="panel panel-default col-sm-4 col-sm-offset-4" style="margin-top: 10%;">
+      <div class="panel-body">
+        <form id="form-horizontal">
+          <h2>歡迎回來</h2>
+          <div class="form-group">
+            <input class="form-control text-center" id="email" type="email" placeholder="電子信箱" />
           </div>
-        <br>
-          <div class="form-floating mb-3">
-            <input class="form-control" id="phone" type="tel" placeholder="Phone number" data-sb-validations="required" />
+          <div class="form-group">
+            <input class="form-control text-center" id="phone" type="tel" placeholder="電話號碼" />
           </div>
-          
-          <br>
-          <div class="d-none" id="submitSuccessMessage">
-              <div class="text-center mb-3"></div>
-          </div>
-        
-          <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button></div>
-      </form>
+          <button class="btn btn-primary btn-xl" id="submitButton" type="submit">送出</button>
+        </form>
 
       </div>
-    </div> 
- </div>
-      
-
-
-
-
+    </div>
+  </div>
 </body>
+
 </html>
