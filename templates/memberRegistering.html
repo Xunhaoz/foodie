@@ -1,140 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Bootstrap </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    .topnav-right {
-      float: right;
-    }
-    a:hover{
-      text-decoration: none;
-    }
-  </style>
 </head>
 
-<body>    
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#cdcfd1;">
-      <button class="navbar-brand" style="border:none;background-color:#cdcfd1;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-egg-fried" viewBox="0 0 16 16">
-          <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-          <path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"/>
-        </svg>
-        FOODIE
-      </button>
-      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="navbar-nav topnav-right">
-          <div class="nav-item active" style="padding-left:10px; padding-right:10px;">
-            <a class="nav-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-cart" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-              </svg>
-            </a>
-          </div>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Foodie</a>
+      </div>
 
-          <div class="nav-item" style="padding-left:10px; padding-right:10px;">
-            <a class="nav-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-coin" viewBox="0 0 16 16">
-                <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z"/>
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
-              </svg>
-            </a>
-          </div>
-          
-          <div>
-            <div class="nav-item dropdown" style="padding-left:3px; padding-right:10px;">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background:#cdcfd1;border:none;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-person" viewBox="0 0 16 16">
-                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-                </svg>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-                <a class="dropdown-item" href="#">A</a>
-                <a class="dropdown-item" href="#">B</a>
-                <a class="dropdown-item" href="#">C</a>
-                <a class="dropdown-item" href="#">D</a>
-                <a class="dropdown-item" href="#">E</a>
-                <a class="dropdown-item" href="#">F</a>
-              </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> 購物車</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-usd"></span> 帳單概況</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span
+                class="glyphicon glyphicon-info-sign"></span> 使用者中心</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">{{ username }}的個人檔案</a></li>
+              <li><a href="#">我的訂單</a></li>
+              <li><a href="#">我的收藏</a></li>
+              <li><a href="#">自訂預算</a></li>
+              <li><a href="#">客服中心</a></li>
+              <li><a href="#">錢包</a></li>
+              <li><a href="#">登出</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="width: 750px; ;">
+    <div class="panel panel-default" style="margin-top:10%;">
+      <div class="panel-body" style="padding:30px;">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-3 control-label">電子信箱</label>
+            <div class="col-sm-6">
+              <input class="form-control" id="focusedInput" type="text">
             </div>
           </div>
-        </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">姓氏</label>
+            <div class="col-sm-6">
+              <input class="form-control" id="focusedInput" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">名字</label>
+            <div class="col-sm-6">
+              <input class="form-control" id="focusedInput" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">性別</label>
+            <label class="col-sm-3" style="padding-top: 5px;"><input type="radio" name="gender">男生</label>
+            <label class="col-sm-3" style="padding-top: 5px;"><input type="radio" name="gender">女生</label>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">電話號碼</label>
+            <div class="col-sm-6">
+              <input class="form-control" id="focusedInput" type="text">
+            </div>
+          </div>
+          <div style="text-align:center ;">
+            <p class="col-sm-8 col-sm-offset-2" style="font-family:Comic Sans MS;">
+              一旦點擊免費註冊，即表示你同意本網站的使用及隱私條款。
+            </p>
+            <button type="button" class="btn col-sm-3 col-sm-offset-4">免費註冊</button>
+          </div>
+
+        </form>
       </div>
-    </nav>
-  </div>
-
-  <div style="border:2px solid #cdcfd1;margin: 10% 20% 10%;border-radius:20px;">
-    <div style="margin:3%; padding:3%;">
-      <div style="padding:1% 25% 1% 25%;">
-        <label for="Email" style="padding-right:19%;">Email</label>
-        <input id='Email' type="text" placeholder="Email" style="width:55%">
-      </div>
-      
-
-      <div style="padding:1% 25% 1% 25%;">
-        <label for="last name" style="padding-right:8.8%;">Last Name</label>
-        <input id="last name" type="text" placeholder="Last Name" style="width:55%;">
-      </div>
-
-      <div style="padding:1% 25% 1% 25%;"> 
-        <label for="first name" style="padding-right:8%;">First Name</label>
-        <input id="first name" type="text" placeholder="First Name" style="width:55%;">
-      </div>  
-
-      <div style="padding:1% 25% 1% 25%;">
-        <label for="gender" style="padding-right:15%;">Gender</label>
-        
-        <br>
-        <br>
-
-        <button id="gender" style="padding:1% 2% 1% 2%;margin-right: 30%;border:none;border-radius:10px; background-color:#8EC2ED;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
-          </svg>
-        </button>
-        <span>or</span>
-        <button id="gender" style="padding:1% 2% 1% 2%;margin-left: 30%;border:none;border-radius:10px; background-color:#E58D8D;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
-          </svg>
-        </button>
-      </div>
-
-      <br>
-      <br>
-
-      <div style="padding:1% 25% 1% 25%;">
-        <label for="phone number">Phone Number</label>
-        <input id="phone number" type="text" placeholder="0912-345-678" style="width:55%;">
-      </div>
-      
-      <br>
-
-      <div style="padding:1% 0% 5% 43%;">
-        <button style="padding:1% 3% 1% 3%;border:none;border-radius:10px;">Submit</button>
-      </div>
-
-      <p style="font-family:Comic Sans MS;font-size:10px;color:gray;padding:1% 16% 0% 15%;">
-        By registering, you agree and accept our Terms and Conditions and Privacy Policy
-      </p>
-      
     </div>
-    
   </div>
-  
+
+
+
 </body>
+
 </html>

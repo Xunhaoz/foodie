@@ -9,7 +9,41 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Document</title>
+    <style>
+        .carousel-control.right, .carousel-control.left {
+        background-image: none;
+        color: #f4511e;
+        }
+
+        .carousel-indicators li {
+        border-color: #f4511e;
+        }
+
+        .carousel-indicators li.active {
+        background-color: #f4511e;
+        }
+
+        .item h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        font-weight: 400;
+        font-style: italic;
+        margin: 70px 0;
+        }
+
+        .item span {
+        font-style: normal;
+        }
+
+        body {
+            background-image: url("{{ url_for('static', filename='src/桌布圖/圈.png') }}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,8 +62,8 @@
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
                 </div>
-                <button type="button" class="btn btn-default">
-                    <span class="glyphicon glyphicon-globe"></span> Serch
+                <button type="button" class="btn">
+                    <span class="glyphicon glyphicon-globe"></span> 搜尋
                 </button>
             </form>
 
@@ -57,8 +91,8 @@
 
     <div class="container">
         <div class="btn-group btn-group-justified">
-            <a href="#" class="btn btn-primary"> 外送 </a>
-            <a href="#" class="btn btn-primary"> 自取 </a>
+            <a href="#" class="btn btn-warning"> 外送 </a>
+            <a href="#" class="btn btn-warning"> 自取 </a>
         </div>
     </div>
 
@@ -67,65 +101,51 @@
         <input class="form-control input-lg" id="inputlg" type="text" placeholder="請輸入關鍵字">
     </div>
 
-    <div class="container">
+    <div class="container notLabeling">
         <div>
             <br>
-            <span>進階篩選
-                <div class="float-left">
-                    <button type="button" class="btn btn-danger pull-right">
-                        <span class="glyphicon glyphicon-remove"></span>
-                        Ubereat
-                    </button>
-                </div>
-            </span>
+            <span>進階篩選</span>
+            <div class="float-left filtering">
+            </div>
         </div>
         <br>
-        <button type="button" class="btn">Ubereat</button>
-        <button type="button" class="btn">Foodmo</button>
-        <button type="button" class="btn">個人蒐藏</button>
-        <button type="button" class="btn">預算內</button>
-        <button type="button" class="btn">個人蒐藏</button>
-        <button type="button" class="btn">運費高低</button>
-        <button type="button" class="btn">優惠</button>
+        <button type="button" class="btn toLabel" onclick="toLabel(this)" id="Ubereat">Ubereat</button>
+        <button type="button" class="btn toLabel" onclick="toLabel(this)" id="Foodmo" >Foodmo</button>
+        <button type="button" class="btn toLabel" onclick="toLabel(this)" id="個人蒐藏" >個人蒐藏</button>
+        <button type="button" class="btn toLabel" onclick="toLabel(this)" id="預算內" >預算內</button>
+        <button type="button" class="btn toLabel" onclick="toLabel(this)" id="運費高低" >運費高低</button>
+        <button type="button" class="btn toLabel" onclick="toLabel(this)" id="優惠" >優惠</button>
     </div>
     <br>
     <div class="container text-center">
 
-        <h2>美食種類</h2><br>
+        <h2><b>美食種類</b></h2><br>
         <p>總有一種屬於您的食物種類</p>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <div class="col-sm-3">
+                    <div class="col-sm-2 col-sm-offset-2">
                         <div class="thumbnail">
                             <img src="{{ url_for('static', filename='src/pexels-ella-olsson-1640777.jpg') }}"
                                 alt="img error" style="height: 6vw; object-fit: cover;">
                             <h2>義式</h2>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <div class="thumbnail">
                             <img src="{{ url_for('static', filename='src/pexels-photo-70497.jpeg') }}" alt="img error"
                                 style="height: 6vw; object-fit: cover;">
                             <h2>美式</h2>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <div class="thumbnail">
                             <img src="{{ url_for('static', filename='src/pexels-photo-271715.webp') }}" alt="img error"
                                 style="height: 6vw; object-fit: cover;">
                             <h2>日式</h2>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <div class="thumbnail">
                             <img src="{{ url_for('static', filename='src/pexels-photo-954677.jpeg') }}" alt="img error"
                                 style="height: 6vw; object-fit: cover;">
@@ -135,28 +155,28 @@
                 </div>
 
                 <div class="item">
-                    <div class="col-sm-3">
+                    <div class="col-sm-offset-2 col-sm-2">
                         <div class="thumbnail">
                             <img src="{{ url_for('static', filename='src/pexels-photo-376464.jpeg') }}" alt="img error"
                                 style="height: 6vw; object-fit: cover;">
                             <h2>甜點</h2>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <div class="thumbnail">
                             <img src="{{ url_for('static', filename='src/pexels-photo-1482803.webp') }}" alt="img error"
                                 style="height: 6vw; object-fit: cover;">
                             <h2>燒烤</h2>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <div class="thumbnail">
                             <img src="{{ url_for('static', filename='src/pexels-photo-1640775.jpeg') }}" alt="img error"
                                 style="height: 6vw; object-fit: cover;">
                             <h2>健康餐</h2>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <div class="thumbnail">
                             <img src="{{ url_for('static', filename='src/pexels-photo-1775043.jpeg') }}" alt="img error"
                                 style="height: 6vw; object-fit: cover;">
@@ -177,32 +197,32 @@
             </a>
         </div>
 
-        <h3>附近美食</h3>
+        <h2><b>附近美食</b></h2>
 
-        <div class="container">
+        <div>
             <div class="row text-center">
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-3186654.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3 ><span class="label label-warning">義式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-3186654.jpeg") }}" alt="img error" >
+                        <p><strong>異國風味義大利麵</strong></p>
+                        <button class="btn">Buy</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-2983101.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3><span class="label label-warning">美式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-2983101.jpeg") }}" alt="img error" >
+                        <p><strong>麥當勞</strong></p>
+                        <button class="btn">Buy</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-1775043.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3><span class="label label-warning">美式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-1775043.jpeg") }}" alt="img error" >
+                        <p><strong>潛艇飽</strong></p>
+                        <button class="btn">Buy</button>
                     </div>
                 </div>
             </div>
@@ -210,53 +230,26 @@
             <div class="row text-center">
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-1640775.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3><span class="label label-warning">健康餐</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-1640775.jpeg") }}" alt="img error" >
+                        <p><strong>健康煮義</strong></p>
+                        <button class="btn">Buy</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-1640772.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3><span class="label label-warning">義式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-1640772.jpeg") }}" alt="img error" >
+                        <p><strong>你好義式</strong></p>
+                        <button class="btn">Buy</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-1603901.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row text-center">
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-1600711.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-1583884.webp") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-1565982.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3><span class="label label-warning">美式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-1603901.jpeg") }}" alt="img error" >
+                        <p><strong>潛艇飽</strong></p>
+                        <button class="btn">Buy</button>
                     </div>
                 </div>
             </div>
@@ -264,53 +257,26 @@
             <div class="row text-center">
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-1482803.webp") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
+                        <h3><span class="label label-warning">早點</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-1600711.jpeg") }}" alt="img error" >
+                        <p><strong>肉肉小姐</strong></p>
+                        <button class="btn">Buy</button>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <h3><span class="label label-warning">美式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-1583884.webp") }}" alt="img error" >
+                        <p><strong>薯條先生</strong></p>
                         <button class="btn">Buy Tickets</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-1448721.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-1267320.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row text-center">
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-958545.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-955137.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-954677.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3><span class="label label-warning">健康餐</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-1565982.jpeg") }}" alt="img error" >
+                        <p><strong>蔬十</strong></p>
+                        <button class="btn">Buy</button>
                     </div>
                 </div>
             </div>
@@ -318,53 +284,26 @@
             <div class="row text-center">
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-769969.webp") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3><span class="label label-warning">燒烤</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-1482803.webp") }}" alt="img error" >
+                        <p><strong>烤式義百分</strong></p>
+                        <button class="btn">Buy</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-691114.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3><span class="label label-warning">甜點</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-1448721.jpeg") }}" alt="img error" >
+                        <p><strong>下午三點</strong></p>
+                        <button class="btn">Buys</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-461428.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row text-center">
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3><span class="label label-warning">義式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-1267320.jpeg") }}" alt="img error" >
+                        <p><strong>CHEF'S</strong></p>
+                        <button class="btn">Buy</button>
                     </div>
                 </div>
             </div>
@@ -372,26 +311,107 @@
             <div class="row text-center">
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-271715.webp") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3><span class="label label-warning">中式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-958545.jpeg") }}" alt="img error" >
+                        <p><strong>牛大哥蔥油餅</strong></p>
+                        <button class="btn">Buy</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3><span class="label label-warning">中式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-955137.jpeg") }}" alt="img error" >
+                        <p><strong>黃家混沌</strong></p>
+                        <button class="btn">Buy</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
-                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg") }}" alt="img error" style="height: 10vw; object-fit:cover;">
-                        <p><strong>Paris</strong></p>
-                        <p>Friday 27 November 2015</p>
-                        <button class="btn">Buy Tickets</button>
+                        <h3><span class="label label-warning">中式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-954677.jpeg") }}" alt="img error" >
+                        <p><strong>大炒燜雞米飯</strong></p>
+                        <button class="btn">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <h3><span class="label label-warning">義式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-769969.webp") }}" alt="img error" >
+                        <p><strong>卡尼莫義大利麵店</strong></p>
+                        <button class="btn">Buy</button>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <h3><span class="label label-warning">韓式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-691114.jpeg") }}" alt="img error" >
+                        <p><strong>韓金館</strong></p>
+                        <button class="btn">Buy</button>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <h3><span class="label label-warning">日式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-461428.jpeg") }}" alt="img error" >
+                        <p><strong>山焙茶館</strong></p>
+                        <button class="btn">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <h3><span class="label label-warning">墨式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-461198.webp") }}" alt="img error" >
+                        <p><strong>瘋塔可墨西哥捲餅</strong></p>
+                        <button class="btn">Buy</button>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <h3><span class="label label-warning">美式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-410648.jpeg") }}" alt="img error" >
+                        <p><strong>白鬍子牛排館</strong></p>
+                        <button class="btn">Buy</button>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <h3><span class="label label-warning">美式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-376464.jpeg") }}" alt="img error" >
+                        <p><strong>小輕鬆餅 </strong></p>
+                        <button class="btn">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <h3><span class="label label-warning">日式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-271715.webp") }}" alt="img error" >
+                        <p><strong>福岡御食</strong></p>
+                        <button class="btn">Buy</button>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <h3><span class="label label-warning">義式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-106343.webp") }}" alt="img error" >
+                        <p><strong>Buono Da Dangiare</strong></p>
+                        <button class="btn">Buy</button>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <h3><span class="label label-warning">美式</span></h3>
+                        <img src="{{ url_for('static', filename="src/pexels-photo-70497.jpeg") }}" alt="img error" >
+                        <p><strong>山姆大叔</strong></p>
+                        <button class="btn">Buy</button>
                     </div>
                 </div>
             </div>
@@ -399,8 +419,8 @@
 
         <div class="container">
             <ul class="pager">
-                <li class="previous"><a href="#">Previous</a></li>
-                <li class="next"><a href="#">Next</a></li>
+                <li class="previous"><a href="#">上一頁</a></li>
+                <li class="next"><a href="#">下一頁</a></li>
             </ul>
         </div>
     </div>
@@ -410,7 +430,18 @@
     </div>
 
     <script>
-        
+        function toLabel (e) {
+            $("#" + $(e).attr('id')).remove()
+            $.tmpl(`<button type="button" class="btn btn-danger pull-right fromLabel" style="margin: 2px;" onclick="fromLabel(this)" id="${$(e).attr('id')}">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    ${$(e).attr('id')}
+                    </button>`).appendTo(".filtering");
+        }
+
+        function fromLabel (e) {
+            $("#" + $(e).attr('id')).remove()
+            $.tmpl(`<button type="button" class="btn toLabel" style="margin: 2px;" onclick="toLabel(this)" id="${$(e).attr('id')}">${$(e).attr('id')}</button>`).appendTo(".notLabeling");
+        }
     </script>
 
 </body>

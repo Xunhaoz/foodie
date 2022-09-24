@@ -38,7 +38,7 @@ def display_advanced_purchase():
 def display_menu():
     return render_template('food_menu.html')
 
-@app.route("/customerMessage.html")
+@app.route("/customerMessage")
 def display_cutomerMessage():
     return render_template('customerMessage.html')
 

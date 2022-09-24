@@ -1,0 +1,26 @@
+.thumbnail {
+    border: none !important;
+}
+
+div.thumbnail > img {
+    margin-bottom: 10px;
+    height: 14vw;
+    width: 23vw;
+    border-radius: 5px;
+}
+
+div.thumbnail > h3 {
+    position: absolute;
+    margin-top: -2px;
+}
+
+div.thumbnail > p {
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+}
+
+.navbar {
+    background-color: #1e1306;
+    border: none;
+    border-radius: 0;
+}

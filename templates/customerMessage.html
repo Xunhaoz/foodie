@@ -1,145 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Bootstrap </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript"
+    src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename=" css/style.css") }}">
   <style>
-    .topnav-right {
-      float: right;
+    div.row>div.col-sm-4>p {
+      padding-top: 10px;
     }
 
-    a:hover{
-      text-decoration: none;
+    div.row>div.col-sm-1 {
+      margin-top: 20px;
     }
-    
   </style>
 </head>
 
-<body>    
-  <div class="row">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#cdcfd1;">
-      <button class="navbar-brand " style="border:none;background-color:#cdcfd1;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-egg-fried" viewBox="0 0 16 16">
-          <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-          <path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"/>
-        </svg>
-        FOODIE
-      </button>
-      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse col-xs-6 col-md-4" id="navbarNav">
-        <div class="navbar-nav topnav-right">
-          <div class="nav-item active" style="padding-left:10px; padding-right:10px;">
-            <a class="nav-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-cart" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-              </svg>
-            </a>
-          </div>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Foodie</a>
+      </div>
 
-          <div class="nav-item" style="padding-left:10px; padding-right:10px;">
-            <a class="nav-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-coin" viewBox="0 0 16 16">
-                <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z"/>
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
-              </svg>
-            </a>
+      <form class="navbar-form navbar-left" action="/action_page.php">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="button" class="btn">
+          <span class="glyphicon glyphicon-globe"></span> 搜尋
+        </button>
+      </form>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> 購物車</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-usd"></span> 帳單概況</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="glyphicon glyphicon-info-sign"></span> 使用者中心</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">{{ username }}的個人檔案</a></li>
+              <li><a href="#">我的訂單</a></li>
+              <li><a href="#">我的收藏</a></li>
+              <li><a href="#">自訂預算</a></li>
+              <li><a href="#">客服中心</a></li>
+              <li><a href="#">錢包</a></li>
+              <li><a href="#">登出</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container text-center">
+    <div style="border:2px solid #cdcfd1; border-radius:20px; background-color: #8c8c8d;">
+      <h3 font-size="10px" style="font-family: Georgia;">
+        <b style="color: white;">
+          Foodie 消費者服務專區
+        </b>
+      </h3>
+
+      <hr style="color:#515152;">
+
+      <br>
+
+      <div id="message_container">
+        <div class="row">
+          <div class="col-sm-1 col-sm-offset-6">
+            <sub style="color: white;">9:16 </sub>
           </div>
-          
-          <div>
-            <div class="nav-item dropdown" style="padding-left:3px; padding-right:10px;">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background:#cdcfd1;border:none;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-person" viewBox="0 0 16 16">
-                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-                </svg>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-                <a class="dropdown-item" href="#">A</a>
-                <a class="dropdown-item" href="#">B</a>
-                <a class="dropdown-item" href="#">C</a>
-                <a class="dropdown-item" href="#">D</a>
-                <a class="dropdown-item" href="#">E</a>
-                <a class="dropdown-item" href="#">F</a>
-              </div>
-            </div>
+          <div class="col-sm-4" style="background-color: #fffffa; border-radius: 20px;">
+            <p>您好，我的餐點會被額外抽成嗎？</p>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row" style="color: white;">
+          <div class="col-sm-4 col-sm-offset-1" style="background-color: #0d5c63; border-radius: 20px;">
+            <p>Foodie因為考慮到消費者及店家，因此不會再抽成。</p>
+          </div>
+          <div class="col-sm-1">
+            <sub>9:16 </sub>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+          <div class="col-sm-1 col-sm-offset-6">
+            <sub style="color: white;">10:57 </sub>
+          </div>
+          <div class="col-sm-4" style="background-color: #fffffa; border-radius: 20px;">
+            <p>好的，謝謝您。</p>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row" style="color: white;">
+          <div class="col-sm-4 col-sm-offset-1" style="background-color: #0d5c63; border-radius: 20px;">
+            <p>不會，Foodie感謝您的提問。</p>
+          </div>
+          <div class="col-sm-1">
+            <sub>10:58 </sub>
           </div>
         </div>
       </div>
-    </nav>
+
+      <br>
+
+      <div style="display: flex; justify-content:space-around;">
+        <button class="btn">
+          我可以退費嗎？
+        </button>
+
+        <button class="btn">
+          非常謝謝你！
+        </button>
+
+        <button class="btn">
+          我的餐點還沒來！
+        </button>
+      </div>
+
+      <hr style="width:100%;color:#515152;">
+
+      <div class="input-group col-sm-6 col-sm-offset-3">
+        <input type="text" class="form-control" placeholder="提交您的建議" id="input_field">
+        <div class="input-group-btn">
+          <button class="btn btn-default" onclick="add_comment()">
+            <i class="glyphicon glyphicon-pencil"></i>
+          </button>
+        </div>
+      </div>
+
+      <br>
+    </div>
   </div>
 
-  <div class='col-md-8' style="border:2px solid #cdcfd1;margin: 10% 15% 10%;border-radius:20px;">
-    <h3 font-size="10px" style="padding-left:30px;font-family: Georgia;">
-        <b>
-            Foodie Customer Service
-        </b>
-    </h3>
-
-    <hr style="width:100%;color:#515152;">
-
-    <div style="padding:0px 0px 3% 56%;">
-      <label for="0915" style="padding:0%">
-        <sub>
-          9:15 p.m.
-        </sub>
-      </label>
-      <div class="0915" style="border:2px solid;border-radius:20px;width:100%;">
-        <p style="padding:5%;">
-          Blablabla...
-        </p>
-      </div>
-    </div>
-   
-    <div style="padding:3% 56% 3% 1%;">
-      <label for="0929">
-        <sub>
-          9:29 p.m.
-        </sub>
-      </label>
-      <div class="0929" style="border:2px solid;border-radius:20px;width:100%;">
-        <p style="padding:5%;">
-          Blablabla...
-        </p>
-      </div>
-    </div>
-
-    <div>
-      <button style="background-color:#d2d2d3;border-radius:10px;padding:1%;border:none;margin:7%;">
-        Hello, is anyone here?
-      </button>
-
-      <button style="background-color:#d2d2d3;border-radius:10px;padding:1%;border:none;margin:7%;">
-        Thanks a lot!
-      </button>
-
-      <button style="background-color:#d2d2d3;border-radius:10px;padding:1%;border:none;margin:7%;">
-        I cannot open the webpage.
-      </button>
-    </div>
-
-    <hr style="width:100%;color:#515152;">
-
-    <div class="input-group" style="padding:0% 1% 2% 1%;">
-      <button style="border:none;background-color:white;">
-        <span style='font-size:50px;padding:2% 1% 2% 0%;'>&#128512;</span>
-      </button>
-      <input type="text" style="width:85%;height:50px;margin:0% 0% 2% 0%;" placeholder="Please input your comment">
-      <div class="input-group-btn">
-        <button class="btn btn-default"  style="border:none; background-color:white;" type="submit"><i class="glyphicon glyphicon-send"></i></button>
-      </div>
-    </div>
-  </div>
-  
+  <script>
+    function add_comment() {
+      let hours = new Date().getHours();
+      let minute = new Date().getMinutes();
+      let comment = $("#input_field").val();
+      $("#input_field").val("");
+      $.tmpl(`
+        <br>
+        <div class="row">
+          <div class="col-sm-1 col-sm-offset-6">
+            <sub style="color: white;">${hours}:${minute}</sub>
+          </div>
+          <div class="col-sm-4" style="background-color: #fffffa; border-radius: 20px;">
+            <p>${comment}</p>
+          </div>
+        </div>
+      `).appendTo("#message_container");
+    }
+  </script>
 </body>
+
 </html>
