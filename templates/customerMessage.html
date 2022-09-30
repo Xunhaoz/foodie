@@ -12,13 +12,6 @@
     src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
   <link rel="stylesheet" href="{{ url_for('static', filename=" css/style.css") }}">
   <style>
-    div.row>div.col-sm-4>p {
-      padding-top: 10px;
-    }
-
-    div.row>div.col-sm-1 {
-      margin-top: 20px;
-    }
   </style>
 </head>
 
@@ -77,8 +70,8 @@
 
       <br>
 
-      <div id="message_container">
-        <div class="row">
+      <div class="row" id="message_container">
+        <div class="col-sm-12">
           <div class="col-sm-1 col-sm-offset-6">
             <sub style="color: white;">9:16 </sub>
           </div>
@@ -89,7 +82,7 @@
 
         <br>
 
-        <div class="row" style="color: white;">
+        <div class="col-sm-12" style="color: white;">
           <div class="col-sm-4 col-sm-offset-1" style="background-color: #0d5c63; border-radius: 20px;">
             <p>Foodie因為考慮到消費者及店家，因此不會再抽成。</p>
           </div>
@@ -100,7 +93,7 @@
 
         <br>
 
-        <div class="row">
+        <div class="col-sm-12">
           <div class="col-sm-1 col-sm-offset-6">
             <sub style="color: white;">10:57 </sub>
           </div>
@@ -111,7 +104,7 @@
 
         <br>
 
-        <div class="row" style="color: white;">
+        <div class="col-sm-12" style="color: white;">
           <div class="col-sm-4 col-sm-offset-1" style="background-color: #0d5c63; border-radius: 20px;">
             <p>不會，Foodie感謝您的提問。</p>
           </div>
@@ -121,23 +114,23 @@
         </div>
       </div>
 
-      <br>
 
-      <div style="display: flex; justify-content:space-around;">
-        <button class="btn">
+
+      <hr style="width:100%;color:#515152;">
+
+      <div style="margin: 0 0 20px 0;">
+        <button type="button" class="btn btn-default">
           我可以退費嗎？
         </button>
 
-        <button class="btn">
+        <button type="button" class="btn btn-default">
           非常謝謝你！
         </button>
 
-        <button class="btn">
+        <button type="button" class="btn btn-default">
           我的餐點還沒來！
         </button>
       </div>
-
-      <hr style="width:100%;color:#515152;">
 
       <div class="input-group col-sm-6 col-sm-offset-3">
         <input type="text" class="form-control" placeholder="提交您的建議" id="input_field">
@@ -159,15 +152,16 @@
       let comment = $("#input_field").val();
       $("#input_field").val("");
       $.tmpl(`
-        <br>
-        <div class="row">
-          <div class="col-sm-1 col-sm-offset-6">
-            <sub style="color: white;">${hours}:${minute}</sub>
+          <br>
+          <div class="col-sm-12">
+            <div class="col-sm-1 col-sm-offset-6">
+              <sub style="color: white;">${hours}:${minute}</sub>
+            </div>
+            <div class="col-sm-4" style="background-color: #fffffa; border-radius: 20px;">
+              <p>${comment}</p>
+            </div>
           </div>
-          <div class="col-sm-4" style="background-color: #fffffa; border-radius: 20px;">
-            <p>${comment}</p>
-          </div>
-        </div>
+          
       `).appendTo("#message_container");
     }
   </script>

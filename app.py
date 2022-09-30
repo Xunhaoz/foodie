@@ -66,10 +66,11 @@ def Private_Collection():
 def PersonalOrder():
     return render_template('PersonalOrder.html')     
 
+# flag
+
 @app.route("/CloseOrder")
 def CloseOrder():
-    return render_template('CloseOrder.html') 
-    return render_template("404.html")
+    return render_template('CloseOrder.html')
 
 @app.route("/loginSuccess")
 def login_success():
