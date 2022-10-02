@@ -38,46 +38,45 @@
 <body>
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Foodie</a>
-      </div>
-
-      <form class="navbar-form navbar-left" action="/action_page.php">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/{{ username }}">Foodie</a>
         </div>
-        <button type="button" class="btn">
-          <span class="glyphicon glyphicon-globe"></span> 搜尋
-        </button>
-      </form>
 
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> 購物車</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-usd"></span> 帳單概況</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-              <span class="glyphicon glyphicon-info-sign"></span> 使用者中心</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">{{ username }}的個人檔案</a></li>
-              <li><a href="#">我的訂單</a></li>
-              <li><a href="#">我的收藏</a></li>
-              <li><a href="#">自訂預算</a></li>
-              <li><a href="#">客服中心</a></li>
-              <li><a href="#">錢包</a></li>
-              <li><a href="#">登出</a></li>
+        <form class="navbar-form navbar-left" action="/action_page.php">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="button" class="btn">
+                <span class="glyphicon glyphicon-globe"></span> 搜尋
+            </button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/CloseOrder/{{ username }}"><span class="glyphicon glyphicon-shopping-cart"></span> 購物車</a></li>
+                <li><a href="/advanced_purchase/{{ username }}"><span class="glyphicon glyphicon-usd"></span> 帳單概況</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="glyphicon glyphicon-info-sign"></span> 使用者中心</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/personalInfo/{{ username }}">{{ username }}的個人檔案</a></li>
+                        <li><a href="/advanced_purchase/{{ username }}">我的訂單</a></li>
+                        <li><a href="/Private_Collection/{{ username }}">我的收藏</a></li>
+                        <li><a href="/personal/{{ username }}?month=12">自訂預算</a></li>
+                        <li><a href="/customerService/{{ username }}">客服中心</a></li>
+                        <li><a href="/deposit/{{ username }}">錢包</a></li>
+                        <li><a href="#">登出</a></li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-        </ul>
-      </div>
+        </div>
     </div>
-  </nav>
-
+</nav>
   <div class="container">
     <div class="panel-group">
       <div class="panel panel-default">
@@ -135,7 +134,7 @@
 
 
   <div>
-    <a href="#" class="float msg-service" style="text-decoration: hover none;">
+    <a href="/customerMessage/{{ username }}" class="float msg-service" style="text-decoration: hover none;">
       <i class="my-float">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chat-dots"
           viewBox="0 0 16 16" style="text-align: center;margin-top:25%;">

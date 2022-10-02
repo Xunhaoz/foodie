@@ -20,36 +20,36 @@
 <body>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Foodie</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> 購物車</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-usd"></span> 帳單概況</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span
-                                class="glyphicon glyphicon-info-sign"></span> 使用者中心</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">{{ username }}的個人檔案</a></li>
-                            <li><a href="#">我的訂單</a></li>
-                            <li><a href="#">我的收藏</a></li>
-                            <li><a href="#">自訂預算</a></li>
-                            <li><a href="#">客服中心</a></li>
-                            <li><a href="#">錢包</a></li>
-                            <li><a href="#">登出</a></li>
-                        </ul>
-                    </li>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/{{ username }}">Foodie</a>
+          </div>
+    
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/CloseOrder/{{ username }}"><span class="glyphicon glyphicon-shopping-cart"></span> 購物車</a></li>
+              <li><a href="/advanced_purchase/{{ username }}"><span class="glyphicon glyphicon-usd"></span> 帳單概況</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span
+                    class="glyphicon glyphicon-info-sign"></span> 使用者中心</a>
+                <ul class="dropdown-menu">
+                  <li><a href="/personalInfo/{{ username }}">{{ username }}的個人檔案</a></li>
+                  <li><a href="/PersonalOrder/{{ username }}">我的訂單</a></li>
+                  <li><a href="/Private_Collection/{{ username }}">我的收藏</a></li>
+                  <li><a href="/personal/{{ username }}?month=12">自訂預算</a></li>
+                  <li><a href="/customerService/{{ username }}">客服中心</a></li>
+                  <li><a href="/deposit/{{ username }}">錢包</a></li>
+                  <li><a href="#">登出</a></li>
                 </ul>
-            </div>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
 
     <div class="container">
         <div class="row">

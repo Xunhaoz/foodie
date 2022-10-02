@@ -5,9 +5,9 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
-@app.route("/")
-def hello():
-    return render_template('index.html')
+@app.route("/<username>")
+def hello(username):
+    return render_template('index.html', username=username)
 
 
 @app.route("/personal/<username>")
@@ -29,11 +29,9 @@ def get_personal_budget(username, method=['GET']):
                            money_values=money_values,
                            sum_of_money=sum(money_values)
                            )
-# --------------------------------|
+                           
 @app.route("/advanced_purchase/<username>")
-#-------------------------------|
 def display_advanced_purchase(username):
-    #-------------------------------------------------|
     return render_template('advanced_purchase.html', username=username)
 
 @app.route("/menu/<username>")
@@ -67,8 +65,6 @@ def Private_Collection(username):
 @app.route("/PersonalOrder/<username>")
 def PersonalOrder(username):
     return render_template('PersonalOrder.html', username=username)     
-
-# flag
 
 @app.route("/CloseOrder/<username>")
 def CloseOrder(username):
