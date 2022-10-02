@@ -29,66 +29,68 @@ def get_personal_budget(username, method=['GET']):
                            money_values=money_values,
                            sum_of_money=sum(money_values)
                            )
+# --------------------------------|
+@app.route("/advanced_purchase/<username>")
+#-------------------------------|
+def display_advanced_purchase(username):
+    #-------------------------------------------------|
+    return render_template('advanced_purchase.html', username=username)
 
-@app.route("/advanced_purchase")
-def display_advanced_purchase():
-    return render_template('advanced_purchase.html')
+@app.route("/menu/<username>")
+def display_menu(username):
+    return render_template('food_menu.html', username=username)
 
-@app.route("/menu")
-def display_menu():
-    return render_template('food_menu.html')
+@app.route("/customerMessage/<username>")
+def display_cutomerMessage(username):
+    return render_template('customerMessage.html', username=username)
 
-@app.route("/customerMessage")
-def display_cutomerMessage():
-    return render_template('customerMessage.html')
+@app.route("/customerService/<username>")
+def display_customerService(username):
+    return render_template('customerService.html', username=username)
 
-@app.route("/customerService")
-def display_customerService():
-    return render_template('customerService.html')
+@app.route("/memberRegistering/<username>")
+def display_memberRegistering(username):
+    return render_template('memberRegistering.html', username=username)
 
-@app.route("/memberRegistering")
-def display_memberRegistering():
-    return render_template('memberRegistering.html')
-
-@app.route("/personalInfo")
-def display_personalInfo():
-    return render_template('personalInfo.html')
+@app.route("/personalInfo/<username>")
+def display_personalInfo(username):
+    return render_template('personalInfo.html', username=username)
 
 @app.errorhandler(404)
 def not_found(e):
     return render_template("404.html")
 
-@app.route("/Private_Collection")
-def Private_Collection():
-    return render_template('Private_Collection.html') 
+@app.route("/Private_Collection/<username>")
+def Private_Collection(username):
+    return render_template('Private_Collection.html', username=username) 
 
-@app.route("/PersonalOrder")
-def PersonalOrder():
-    return render_template('PersonalOrder.html')     
+@app.route("/PersonalOrder/<username>")
+def PersonalOrder(username):
+    return render_template('PersonalOrder.html', username=username)     
 
 # flag
 
-@app.route("/CloseOrder")
-def CloseOrder():
-    return render_template('CloseOrder.html')
+@app.route("/CloseOrder/<username>")
+def CloseOrder(username):
+    return render_template('CloseOrder.html', username=username)
 
-@app.route("/loginSuccess")
-def login_success():
-    return render_template('loginSuccess.html')
+@app.route("/loginSuccess/<username>")
+def login_success(username):
+    return render_template('loginSuccess.html', username=username)
 
-@app.route("/deposit")
-def deposit():
-    return render_template('deposit.html')
-
-
-@app.route("/confirmOrder")
-def confirm_order():
-    return render_template('confirmOrder.html')
+@app.route("/deposit/<username>")
+def deposit(username):
+    return render_template('deposit.html', username=username)
 
 
-@app.route("/splitBill")
-def split_bill():
-    return render_template('splitBill.html')
+@app.route("/confirmOrder/<username>")
+def confirm_order(username):
+    return render_template('confirmOrder.html', username=username)
+
+
+@app.route("/splitBill/<username>")
+def split_bill(username):
+    return render_template('splitBill.html', username=username)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

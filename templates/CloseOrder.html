@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+  <link rel="icon" href="{{url_for('static',filename="src/favicon_.ico") }}" type="image/x-icon">
+  <title>
+    Foodie
+  </title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,48 +59,51 @@
   <div class="container">
     <div class="panel panel-default">
       <div class="panel-body">
-        <img
-          src="https://www.mirrormedia.com.tw/assets/images/20200514154032-fd65b47f86a0e233d718cc4e39d66d35-tablet.png"
-          alt="Avatar" style="width:100%;">
+          <img src="{{ url_for('static', filename="src/菜單.png")}}" style="width:100%;" > 
         <div>
-          <h3>人氣推薦</h3>
+          <h3>重量級XL套餐</h3>
           <div class="row">
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/重量/吮指雙雞XL套餐202204211.jpg")}}" class="media-object">   
                 </div>
-                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="row">
-                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
-                </div>
-                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7" >
+                  <h4 class="media-heading">吮指雙雞XL套餐 $189</h4>
+                  <p>咔啦脆雞(辣)X2<br>
+                    上校雞塊X2<br>
+                    香酥脆薯(中)X1<br>
+                    原味蛋撻X1<br>
+                    百事可樂(中)X1</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/重量/義式香草紙包雞XL套餐202204211.jpg")}}" class="media-object"> 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">義式香草紙包雞XL套餐 #189</h4>
+                  <p>義式香草紙包雞X1份<br>
+                    上校雞塊X2<br>
+                    原味蛋撻X1<br>
+                    百事可樂(中)X1</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                  <img src="{{ url_for('static', filename="src/重量/花生起司雞柳捲XL餐20220518.jpg")}}" class="media-object" > 
+                </div>
+                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                  <h4 class="media-heading">花生起司雞柳捲XL套餐 $175</h4>
+                  <p>花生起司雞柳捲x1<br>
+                    咔啦脆雞x1<br>
+                    香酥脆薯(中)x1<br>
+                    原味蛋撻*1<br>
+                    百事可樂(中)x1</p>
                 </div>
               </div>
             </div>
@@ -106,83 +113,89 @@
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/重量/花生熔岩雞腿堡XL餐20220518-pc.jpg")}}" class="media-object" > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">花生熔岩咔啦雞腿堡XL套餐 $195</h4>
+                  <p>花生熔岩咔啦雞腿堡(辣)X1<br>
+                    咔啦脆雞(辣)X1<br>
+                    香酥脆薯(中)X1<br>
+                    原味蛋撻X1<br>
+                    百事可樂(中)X1</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/重量/紐奧良烤雞腿堡XL餐20220518.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">紐奧良烤雞腿堡XL套餐 $189</h4>
+                  <p>紐奧良烤雞腿堡(辣)X1<br>
+                    咔啦脆雞(辣)X1<br>
+                    原味蛋撻X1<br>
+                    香酥脆薯(中)X1 <br>
+                    百事可樂(中)X1</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/重量/卡啦雞腿堡XL餐20220518-pc.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">咔啦雞腿堡XL套餐 $185</h4>
+                  <p>咔啦雞腿堡(辣)X1 <br>
+                    咔啦脆雞(辣)X1 <br>
+                    原味蛋撻X1 <br>
+                    香酥脆薯(中)X1 <br>
+                    百事可樂(中)X1</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div>
-          <h3>人氣推薦</h3>
+          <h3>個人獨享套餐</h3>
           <div class="row">
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/個人/吮指雙雞套餐-210726.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">吮指雙雞套餐  $159</h4>
+                  <p>卡拉脆雞(辣)X2
+                    香酥脆薯(中)X2
+                    百事可樂(中)X1</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/個人/花生熔岩卡啦雞腿堡餐20220518.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">花生熔岩卡啦雞腿堡餐 $155</h4>
+                  <p> 花生熔岩卡啦雞腿堡(辣)X1
+                    香酥脆薯(中)X1
+                    百事可樂(中)X1</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/個人/紐奧良烤堡餐20220518.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">紐奧良烤堡餐 $139</h4>
+                  <p>紐奧良烤堡餐(辣)X1
+                    香酥脆薯(中)X1
+                    百事可樂(中)X1</p>
                 </div>
               </div>
             </div>
@@ -192,83 +205,82 @@
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/個人/香草紙包雞個人餐-210608.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">香草紙包雞個人餐  $159</h4>
+                  <p> 義式香草紙包雞X1
+                    20:00前供應 雞汁風味飯X1; 
+                    20:00後供應香酥脆薯(中)X1
+                    百事可樂(中)X1</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/個人/八塊上校雞塊套餐20220421.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">8塊上校雞塊套餐 $99</h4>
+                  <p>八塊上校雞塊x1
+                    百事可樂(中)x1</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/個人/花生起司雞柳捲餐20220518-pc.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">花生起司雞柳捲餐 $99</h4>
+                  <p>花生起司雞柳捲
+                    百事可樂(中)x1</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div>
-          <h3>人氣推薦</h3>
+          <h3>多人歡聚餐</h3>
           <div class="row">
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/多人餐/經典A餐-6塊雞桶-210726.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">經典A餐-6塊雞桶 $317</h4>
+                  <p>咔啦脆雞(辣)X6<br>
+                    香酥脆薯(中)X1</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/多人餐/經典A餐-8塊雞桶-210726.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">經典A餐-8塊雞桶 $419</h4>
+                  <p>咔啦脆雞(辣)X8 <br>
+                    香酥脆薯(中)X2</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/多人餐/派對B餐-6塊雞20220421.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">派對B餐-6塊雞桶 $427</h4>
+                  <p>咔啦脆雞(辣)X6 <br>
+                    香酥脆薯(中)X1 <br>
+                    上校雞塊X6 <br>
+                    雙色轉轉QQ球X1 <br>
+                    可樂(中)X3</p>
                 </div>
               </div>
             </div>
@@ -278,39 +290,42 @@
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/多人餐/派對B餐-8塊雞20220421-pc.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">派對B餐-8塊雞桶 $559</h4>
+                  <p>咔啦脆雞(辣)X8 <br>
+                    香酥脆薯(中)X2<br>
+                    上校雞塊X8<br>
+                    雙色轉轉QQ球X1<br>
+                    可樂(瓶)X1</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/多人餐/經典A餐-10塊雞桶-210726-pc.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">經典A餐-10塊雞桶 $509</h4>
+                  <p>咔啦脆雞(辣)X10<br>
+                    香酥脆薯(中)X2</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="row">
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                  <img
-                    src="https://www.gomaji.com/blog/wp-content/uploads/2020/04/Da-Tung-Food-Banner-e1588216225724.jpg"
-                    class="media-object">
+                  <img src="{{ url_for('static', filename="src/多人餐/派對B餐-10塊雞20220421.jpg")}}" class="media-object"  > 
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                  <h4 class="media-heading">商家名字</h4>
-                  <p>描述</p>
+                  <h4 class="media-heading">派對B餐-10塊雞桶 $679</h4>
+                  <p>咔啦脆雞(辣)X10<br>
+                    香酥脆薯(大)X2<br>
+                    上校雞塊X10<br>
+                    雙色轉轉QQ球X1<br>
+                    可樂(瓶)X1</p>
                 </div>
               </div>
             </div>
